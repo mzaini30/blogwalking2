@@ -6,6 +6,6 @@ layout: compress
 
 data = [
 {% for x in data %}
-    "{{ x }}",
+    "{{ x }}"{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
