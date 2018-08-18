@@ -18,7 +18,7 @@
 <body>
     <script type="text/javascript">
     	init_date = new Date()
-    	milidetik = init_date.getMilliSeconds()
+    	milidetik = init_date.getMilliseconds()
     	if (milidetik >= data.length){
     		location.href = data[milidetik % data.length]
     	} else if (milidetik == 0){
