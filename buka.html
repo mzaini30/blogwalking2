@@ -6,12 +6,18 @@
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <title>Buka Blog</title>
     <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
 </head>
 
 <body>
     <script type="text/javascript">
-    location.href = data[0]
+    	init_date = new Date()
+    	detik = init_date.getSeconds()
+    	if (detik >= data.length){
+    		location.href = data[detik % data.length]
+    	} else {
+    		location.href = data[data.length % detik]
+    	}
     </script>
 </body>
 
