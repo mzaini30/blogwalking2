@@ -12,11 +12,13 @@
 <body>
     <script type="text/javascript">
     	init_date = new Date()
-    	detik = init_date.getSeconds()
-    	if (detik >= data.length){
-    		location.href = data[detik % data.length]
+    	milidetik = init_date.getMilliSeconds()
+    	if (milidetik >= data.length){
+    		location.href = data[milidetik % data.length]
+    	} else if (milidetik == 0){
+    		location.href = data[data.length % 1]
     	} else {
-    		location.href = data[data.length % detik]
+    		location.href = data[data.length % milidetik]
     	}
     </script>
 </body>
